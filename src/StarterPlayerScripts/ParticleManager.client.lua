@@ -1,4 +1,4 @@
-local EmitterModule = require(game.ReplicatedStorage.UI_EmitterModule)
+local EmitterModule = require(game.ReplicatedStorage.Shared.Utils.UI_EmitterModule)
 
 for _,p in pairs(game.Players.LocalPlayer.PlayerGui:GetDescendants()) do
 	if p:IsA("ParticleEmitter") then

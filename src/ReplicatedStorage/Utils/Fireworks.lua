@@ -22,14 +22,15 @@ function FireworksModule:CreateFireworkParams(fireworks)
 	local Lighting = game:GetService("Lighting")
 
 	---/Attributes
-	local FireworkLength = script.Parent:GetAttribute("FireworkLength")
-	local ExplosionDetail = script.Parent:GetAttribute("ExplosionDetail")
+
+	local FireworkLength = 	workspace.Fireworks.Configuration:WaitForChild("FireworkLength").Value
+	local ExplosionDetail = workspace.Fireworks.Configuration:WaitForChild("ExplosionDetail").Value
 	
-	local TrailOffsetYMin = script.Parent:GetAttribute("TrajectoryOffsetYMin")
-	local TrailOffsetYMax = script.Parent:GetAttribute("TrajectoryOffsetYMax")
+	local TrailOffsetYMin = workspace.Fireworks.Configuration:WaitForChild("TrailOffsetYMin").Value
+	local TrailOffsetYMax = workspace.Fireworks.Configuration:WaitForChild("TrailOffsetYMax").Value
 	
-	local TrailOffsetXZMin = script.Parent:GetAttribute("TrajectoryOffsetXZMin")
-	local TrailOffsetXZMax = script.Parent:GetAttribute("TrajectoryOffsetXZMax")
+	local TrailOffsetXZMin = workspace.Fireworks.Configuration:WaitForChild("TrailOffsetXZMin").Value
+	local TrailOffsetXZMax = workspace.Fireworks.Configuration:WaitForChild("TrailOffsetXZMax").Value
 	
 	--/Colorization
 	local Color1 = Color3.fromRGB(math.random(0,255),math.random(0,255),math.random(0,255))

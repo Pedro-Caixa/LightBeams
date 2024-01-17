@@ -2,11 +2,11 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local ServerScriptService = game:GetService("ServerScriptService")
 
 script.Parent.Name = "FireworkScripts"
-local NightToggle = script:GetAttribute("NightToggle")
-local MinWait = script:GetAttribute("MinWait")
-local MaxWait = script:GetAttribute("MaxWait")
+local NightToggle = workspace.Fireworks.Configuration:WaitForChild("NightToggle").Value
+local MinWait = workspace.Fireworks.Configuration:WaitForChild("MinWait").Value
+local MaxWait = workspace.Fireworks.Configuration:WaitForChild("MaxWait").Value
 local FireworkModule = require(ReplicatedStorage.Shared.Utils.Fireworks)
-local NightTime = false
+local NightTime = true
 for _, fireworks in pairs(workspace:WaitForChild("Fireworks", math.huge):GetChildren()) do
 	if fireworks.Name == "FireworkLauncher" then
 		spawn(function()
@@ -14,8 +14,8 @@ for _, fireworks in pairs(workspace:WaitForChild("Fireworks", math.huge):GetChil
 				while wait(math.random(MinWait, MaxWait))do
 					
 					if NightTime == false then
-						
 					else
+						print("Fireworks launched")
 						FireworkModule:CreateFireworkParams(fireworks)
 					end
 				end
