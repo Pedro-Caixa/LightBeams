@@ -18,6 +18,13 @@
       }
     },
 
+    "ServerStorage": {
+      "Storage": {
+        "$path": "src/ServerStorage"
+      }
+    },
+
+
     "StarterPlayer": {
       "StarterPlayerScripts": {
         "Client": {
