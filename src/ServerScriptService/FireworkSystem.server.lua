@@ -5,7 +5,7 @@ local NightToggle = workspace.Fireworks.Configuration:WaitForChild("NightToggle"
 local MinWait = workspace.Fireworks.Configuration:WaitForChild("MinWait").Value
 local MaxWait = workspace.Fireworks.Configuration:WaitForChild("MaxWait").Value
 local FireworkModule = require(ReplicatedStorage.Shared.Utils.Fireworks)
-local NightTime = true
+local NightTime = false
 for _, fireworks in pairs(workspace:WaitForChild("Fireworks", math.huge):GetChildren()) do
 	if fireworks.Name == "FireworkLauncher" then
 		spawn(function()
