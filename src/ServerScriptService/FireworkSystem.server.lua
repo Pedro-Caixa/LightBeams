@@ -1,7 +1,6 @@
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local ServerScriptService = game:GetService("ServerScriptService")
 
-script.Parent.Name = "FireworkScripts"
 local NightToggle = workspace.Fireworks.Configuration:WaitForChild("NightToggle").Value
 local MinWait = workspace.Fireworks.Configuration:WaitForChild("MinWait").Value
 local MaxWait = workspace.Fireworks.Configuration:WaitForChild("MaxWait").Value
@@ -12,7 +11,6 @@ for _, fireworks in pairs(workspace:WaitForChild("Fireworks", math.huge):GetChil
 		spawn(function()
 			if NightToggle == true then
 				while wait(math.random(MinWait, MaxWait))do
-					
 					if NightTime == false then
 					else
 						print("Fireworks launched")
